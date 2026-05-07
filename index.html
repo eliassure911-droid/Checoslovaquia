@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1920x1080?text=Praga+Castillo+al+atardecer') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #c8102e;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #ffd700;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+.section {
+    padding: 100px 10%;
+}
+
+.bg-light {
+    background: #f8f8f8;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #c8102e;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse > * {
+    direction: ltr;
+}
+
+.content-grid img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.small {
+    margin-top: 20px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checoslovaquia - Joya de Europa Central</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🇨🇿🇸🇰 Checoslovaquia</div>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#atractivos">Atractivos</a></li>
+                <li><a href="#kafka">Kafka</a></li>
+                <li><a href="#cultura">Cultura & Gastronomía</a></li>
+                <li><a href="#contacto">Visítanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre la magia de Checoslovaquia</h1>
+            <p>Castillos medievales, ciudades de cuento, cultura vibrante y paisajes inolvidables en el corazón de Europa</p>
+            <a href="#atractivos" class="btn">Explorar destinos</a>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="section">
+        <h2>Una rica historia compartida</h2>
+        <div class="content-grid">
+            <div class="text">
+                <p>Checoslovaquia existió como nación unificada desde 1918 hasta 1993, cuando se dividió pacíficamente en la República Checa y Eslovaquia. Sus raíces se remontan a los reinos medievales de Bohemia, Moravia y el Principado de Nitra.</p>
+                <p>Praga fue una de las ciudades más importantes del Sacro Imperio Romano Germánico. La región fue cuna de grandes movimientos culturales, sufrió las guerras mundiales y vivió bajo el régimen comunista hasta la Revolución de Terciopelo en 1989.</p>
+            </div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.101viajes.com%2Fsites%2Fdefault%2Ffiles%2Fpuente-carlos-praga_3.jpg&f=1&nofb=1&ipt=f1c881c15dca4dbbbf1d5f28bd548d1446de0dbe4fc148ce1c6f67b0c7230121" alt="Praga histórica">
+        </div>
+    </section>
+
+    <!-- Atractivos Turísticos -->
+    <section id="atractivos" class="section bg-light">
+        <h2>Lugares Turísticos e Históricos Imperdibles</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Praga</h3>
+                <p>La "Ciudad de las Cien Torres". Castillo de Praga, Puente Carlos, Plaza de la Ciudad Vieja y el Reloj Astronómico.</p>
+            </div>
+            <div class="card">
+                <h3>Český Krumlov</h3>
+                <p>Pueblo medieval declarado Patrimonio de la Humanidad por la UNESCO, con un castillo renacentista sobre el río Vltava.</p>
+            </div>
+            <div class="card">
+                <h3>Karlovy Vary</h3>
+                <p>Famosa ciudad balneario con aguas termales, arquitectura barroca y festivales de cine.</p>
+            </div>
+            <div class="card">
+                <h3>Altos Tatras (Eslovaquia)</h3>
+                <p>Impresionantes montañas para senderismo, esquí y naturaleza virgen.</p>
+            </div>
+            <div class="card">
+                <h3>Castillo de Spiš</h3>
+                <p>Uno de los castillos más grandes de Eslovaquia, ruinas impresionantes declaradas UNESCO.</p>
+            </div>
+            <div class="card">
+                <h3>Bratislava</h3>
+                <p>Capital eslovaca con castillo sobre el Danubio y casco antiguo encantador.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franz Kafka -->
+    <section id="kafka" class="section">
+        <h2>Franz Kafka y Praga</h2>
+        <div class="content-grid reverse">
+            <div class="text">
+                <p>Praga es inseparable de **Franz Kafka** (1883-1924), uno de los escritores más influyentes del siglo XX. Nacido en la Ciudad Vieja de Praga, la ciudad inspiró muchas de sus obras como *La Metamorfosis* y *El Proceso*.</p>
+                <p>Visita el <strong>Museo Franz Kafka</strong> en Malá Strana, su casa natal cerca de la Plaza de la Ciudad Vieja, la estatua giratoria de su cabeza en Národní třída, o recorre la "Praga de Kafka" siguiendo sus pasos por el Puente Carlos y el Barrio Judío.</p>
+            </div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fprague-secrete.fr%2Fwp-content%2Fuploads%2F2018%2F06%2F27KAFKA6-superJumbo.jpg&f=1&nofb=1&ipt=01f96e2306c2404ce79533b8c9098f70faa58e17661c9acace228ebca79af91c" alt="Franz Kafka en Praga">
+        </div>
+    </section>
+
+    <!-- Cultura, Gastronomía, Tradiciones y Sociedad -->
+    <section id="cultura" class="section bg-light">
+        <h2>Cultura, Gastronomía y Tradiciones</h2>
+        <div class="content-grid">
+            <div>
+                <h3>Cultura y Sociedad</h3>
+                <p>Herencia checa y eslovaca rica en música (Dvořák, Smetana), literatura y artes. La sociedad es hospitalaria, con fuerte orgullo por su historia y un alto nivel educativo. Las tradiciones folclóricas se mantienen vivas en festivales y pueblos.</p>
+                
+                <h3>Gastronomía</h3>
+                <p><strong>Checa:</strong> Goulash, knedlíky (bolas de masa), cerdo asado con chucrut y la famosa cerveza checa (Pilsner Urquell).</p>
+                <p><strong>Eslovaca:</strong> Bryndzové halušky (ñoquis con queso de oveja), sopas cremosas y vinos de las regiones del sur.</p>
+            </div>
+            <div>
+                <h3>Tradiciones</h3>
+                <ul>
+                    <li>Festivales de primavera y Navidad con mercados mágicos en Praga y Bratislava.</li>
+                    <li>Música folclórica y bailes en los Tatras y Bohemia.</li>
+                    <li>Termas y spas con tradición centenaria.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Llamada a acción -->
+    <footer id="contacto">
+        <p>¡Planifica tu viaje a Checoslovaquia hoy!</p>
+        <a href="#" class="btn">Reservar tour</a>
+        <p class="small">Plantel Fundacion Azteca 3106</p>
+    </footer>
+
+</body>
+</html>
